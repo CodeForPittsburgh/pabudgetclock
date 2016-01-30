@@ -1,7 +1,7 @@
 port:  5000
 markdown: kramdown
 name: Pennsylvania Budget Clock
-url: http://[add me]
+url: http://pabudgetclock.com
 title: Pennsylvania Budget Clock
 description: "Pennsylvania has languished without a budget for"
 encoding: utf-8
