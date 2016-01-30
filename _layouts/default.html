@@ -94,7 +94,7 @@
             }, 1000);
 
             function updateClock(){
-                clock = moment().subtract(moment("July 1 2015 5:00:00"));
+                clock = moment().subtract(moment("July 1 2015 4:00:00")); <!--UTC Offset is -5 for Chicago in the summer, so this is midnight. Changing it to 4 to reflect PA's -4 offset during the summer-->
                 $("#months").html(clock.get('month'));
                 $("#days").html(clock.get('date'));
                 $("#hours").html(clock.get('hour'));
