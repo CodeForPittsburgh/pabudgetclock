@@ -81,7 +81,7 @@ a:hover, a:active{
 	display: inline-block;
 	min-width: 75px;
 }
-#months, #days, #hours, #minutes, #seconds {
+#months, #days, #hours, #minutes, #seconds, #govdays {
 	display: inline-block;
 	height: 40px;
 }
