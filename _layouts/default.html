@@ -87,7 +87,7 @@
             }
 			
 			function updateClock2(){
-                clock2 = moment("February 9 2016 12:00:00").subtract(moment()); <!--Governor's Budget Address-->
+                clock2 = moment("February 9 2016 12:00:00").fromnow(); <!--Governor's Budget Address-->
                 $("#months2").html(clock2.get('month'));
                 $("#days2").html(clock2.get('date'));
                 $("#hours2").html(clock2.get('hour'));
