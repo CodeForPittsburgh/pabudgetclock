@@ -124,6 +124,11 @@ a:hover, a:active{
 	padding-bottom: 0px;
 }
 
+.no-pad-bottom2 {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
 
 button{
     background-color: inherit;
