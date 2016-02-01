@@ -71,11 +71,6 @@
             setInterval(function(){
                 updateClock();
             }, 1000);
-			
-			setInterval(function(){
-                updateClock2();
-            }, 1000);
-			
 
             function updateClock(){
                 clock = moment().subtract(moment("June 30 2015 23:00:00")); <!--Wrong! This should be 11pm day before (daylight savings)-->
@@ -85,6 +80,10 @@
                 $("#minutes").html(clock.get('minute'));
                 $("#seconds").html(clock.get('second'));
             }
+			
+			setInterval(function(){
+                updateClock2();
+            }, 1000);
 			
 			function updateClock2(){
                 clock2 = moment("February 9 2016 12:00:00").fromnow(); <!--Governor's Budget Address-->
