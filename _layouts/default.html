@@ -62,11 +62,19 @@
 
 			var clock;
             updateClock();
+			
+			var clock2;
+			updateClock2();
+			
+			
 
             setInterval(function(){
                 updateClock();
             }, 1000);
 			
+			setInterval(function(){
+                updateClock2();
+            }, 1000);
 			
 
             function updateClock(){
@@ -76,6 +84,15 @@
                 $("#hours").html(clock.get('hour'));
                 $("#minutes").html(clock.get('minute'));
                 $("#seconds").html(clock.get('second'));
+            }
+			
+			function updateClock2(){
+                clock2 = moment("February 9 2016 12:00:00").subtract(moment()); <!--Governor's Budget Address-->
+                $("#months2").html(clock2.get('month'));
+                $("#days2").html(clock2.get('date'));
+                $("#hours2").html(clock2.get('hour'));
+                $("#minutes2").html(clock2.get('minute'));
+                $("#seconds2").html(clock2.get('second'));
             }
 
             function shuffle(o){
