@@ -77,7 +77,7 @@
                 $("#hours").html(clock.get('hour'));
                 $("#minutes").html(clock.get('minute'));
                 $("#seconds").html(clock.get('second'));
-				$("#govdays").html(abs(moment("February 9 2016 11:30:00").diff(moment(), 'hour')));
+				$("#govdays").html(moment().diff(moment("February 9 2016 11:30:00"), 'hour'));
             }
 
             function shuffle(o){
