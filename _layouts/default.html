@@ -44,11 +44,12 @@
         <script src="js/analytics_lib.js"></script>
         <script type="text/javascript">
 
-            default_reason = {title: 'The unstable budget process may cause the state's credit to be downgraded.', source: "philly.com", url: 'http://articles.philly.com/2016-03-06/business/71223640_1_credit-rating-compromise-budget-aa-minus'}
+            default_reason = {title: "The unstable budget process may cause Pennsylvania's credit to be downgraded.", source: "philly.com", url: "goo.gl/zrjYih"}
 
             var reasons = [
-                {title: 'The recently passed 2015-2016 budget pushes a $2 billion structural deficit onto the upcoming budget.', source: 'Reading Eagle', url: 'http://www.readingeagle.com/news/article/analysts-see-mess-in-pennsylvania-budget'},
-				{title: 'The current budget is not fully resolved, as the fiscal code, the document by which certain line items are further provisioned, was vetoed.', source: 'NBC Philadelphia', url: 'http://www.nbcphiladelphia.com/news/local/Wolf-Vetoes-Fiscal-Code-Bill-Related-to-Pennsylvania-Budget-373753241.html'}
+				{title: "The recently passed 2015-2016 budget pushes a $2 billion structural deficit onto the upcoming budget.", source: "Reading Eagle", url: "http://www.readingeagle.com/news/article/analysts-see-mess-in-pennsylvania-budget"},
+				{title: "The unstable budget process may cause Pennsylvania's credit to be downgraded.", source: "philly.com", url: "goo.gl/zrjYih"},
+				{title: "The current budget is not fully resolved, as the fiscal code, the document by which certain line items are further provisioned, was vetoed.", source: "NBC Philadelphia", url: "http://www.nbcphiladelphia.com/news/local/Wolf-Vetoes-Fiscal-Code-Bill-Related-to-Pennsylvania-Budget-373753241.html"}
             ]
             var indices = []
             $.each(reasons, function( index, value ) {
@@ -57,7 +58,7 @@
 
             var i = 0;
 
-			var clock;
+			var clock = moment();
             updateClock();
 
             setInterval(function(){
@@ -67,13 +68,13 @@
 			
 
             function updateClock(){
-                clock = moment("July 1 2016 00:00:00").subtract(moment()); <!--Wrong! This should be 11pm day before (daylight savings)-->
-                $("#months").html(clock.get('month'));
+                clock = moment("July 1 2016 00:00:00").subtract(moment());
+                clock.month("april"); // update manually, what a horrible hack sorry 
+				$("#months").html(clock.get('month'));
                 $("#days").html(clock.get('date'));
                 $("#hours").html(clock.get('hour'));
                 $("#minutes").html(clock.get('minute'));
                 $("#seconds").html(clock.get('second'));
-				$("#govdays").html(moment().diff(moment("February 9 2016 11:30:00"), 'hour'));
             }
 
             function shuffle(o){
