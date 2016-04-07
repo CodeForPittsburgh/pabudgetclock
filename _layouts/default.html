@@ -6,14 +6,14 @@
         
         <title>Pennsylvania Budget Clock</title>
         
-        <meta name="description" content="See how long Pennsylvania has been languishing without a budget, why it matters, & what you can do about it.">
+        <meta name="description" content="See how long Pennsylvania has until the new budget is due, and what you can do about it.">
         <meta name="author" content="Open Pittsburgh & Chi Hack Night">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta property="og:site_name" content="Pennsylvania Budget Clock">
         <meta property="og:title" content="Pennsylvania Budget Clock">
         <meta property="og:type" content="website">
-        <meta property="og:description" content="See how long Pennsylvania has been languishing without a budget, why it matters, & what you can do about it.">
+        <meta property="og:description" content="See how long Pennsylvania has until the new budget is due, and what you can do about it.">
         <meta property="og:url" content="http://pabudgetclock.com/">
         <meta property="og:image" content="http://pabudgetclock.com/images/screengrab.jpg">
 
@@ -21,7 +21,7 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@openpgh">
         <meta name="twitter:creator" content="@openpgh">
-        <meta name="twitter:description" content="See how long Pennsylvania has been languishing without a budget, why it matters, & what you can do about it.">
+        <meta name="twitter:description" content="See how long Pennsylvania has until the new budget is due, and what you can do about it.">
         <meta name="twitter:title" content="Pennsylvania Budget Clock">
         <meta name="twitter:url" content="http://pabudgetclock.com/">
         <meta name="twitter:image:src" content="http://pabudgetclock.com/images/screengrab.jpg">
@@ -44,15 +44,11 @@
         <script src="js/analytics_lib.js"></script>
         <script type="text/javascript">
 
-            default_reason = {title: 'Pennsylvania schools & districts have been forced to borrow nearly a billion dollars from private banks, with interest.', source: "Pittsburgh Post Gazette", url: 'http://www.post-gazette.com/news/state/2016/01/11/CCAC-borrows-to-offset-state-budget-crisis-and-the-interest-keeps-growing/stories/201601110014'}
+            default_reason = {title: 'The unstable budget process may cause the state's credit to be downgraded.', source: "philly.com", url: 'http://articles.philly.com/2016-03-06/business/71223640_1_credit-rating-compromise-budget-aa-minus'}
 
             var reasons = [
-                {title: 'PA college students are not receiving well-earned PA state grants.', source: 'Kutztown University', url: 'http://www.kutztown.edu/news-and-media/announcements/pheaa-grant-notice.htm'},
-		{title: "This is the longest-lasting budget impasse the state has seen in two generations.", source: "PennLive", url: "http://www.pennlive.com/news/2016/01/bad_budget_times_equal_bad_per.html"},
-	        {title: "It is causing veteran lawmakers to quit in frustration.", source: "Lancaster Online", url: "http://lancasteronline.com/news/pennsylvania/state-lawmakers-announce-retirements-amidst-budget-impasse-witf-reports/article_672e7d16-bae9-11e5-a8c4-a743bdfe3a6c.html"},
-		{title: "The Department of Environmental Protection is losing the ability to fill nearly 200 vacant staff positions, including two dozen in the program that oversees shale gas drilling.", source: "Pittsburgh Post-Gazette's PowerSource", url: "http://powersource.post-gazette.com/powersource/policy-powersource/2016/02/02/Wolf-imposes-limits-filling-vacant-state-jobs/stories/201602030058"},
-                {title: "Failure to fund certain line items in a timely manner can be considered illegal, and the state is being thusly sued.", source: "Daily Collegian", url: "http://www.collegian.psu.edu/news/state_national_international/article_33808d3e-be12-11e5-9244-378ff09ebb14.html"},
-                {title: "Penn State will be forced to lay off 1,100 employees and shutter all of its agricultural extension offices.", source: "The Philidelphia Inquirer", url:  "http://www.philly.com/philly/education/20160227_Budget_gridlock_could_cost_Penn_State_1_100_jobs.html"}
+                {title: 'The recently passed 2015-2016 budget pushes a $2 billion structural deficit onto the upcoming budget.', source: 'Reading Eagle', url: 'http://www.readingeagle.com/news/article/analysts-see-mess-in-pennsylvania-budget'},
+				{title: 'The current budget is not fully resolved, as the fiscal code, the document by which certain line items are further provisioned, was vetoed.', source: 'NBC Philadelphia', url: 'http://www.nbcphiladelphia.com/news/local/Wolf-Vetoes-Fiscal-Code-Bill-Related-to-Pennsylvania-Budget-373753241.html'}
             ]
             var indices = []
             $.each(reasons, function( index, value ) {
@@ -71,7 +67,7 @@
 			
 
             function updateClock(){
-                clock = moment().subtract(moment("June 30 2015 23:00:00")); <!--Wrong! This should be 11pm day before (daylight savings)-->
+                clock = moment("July 1 2016 00:00:00").subtract(moment()); <!--Wrong! This should be 11pm day before (daylight savings)-->
                 $("#months").html(clock.get('month'));
                 $("#days").html(clock.get('date'));
                 $("#hours").html(clock.get('hour'));
