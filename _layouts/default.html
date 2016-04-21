@@ -59,6 +59,8 @@
             var i = 0;
 
 			var clock = moment();
+			var end = moment("July 1 2016 00:00:00");
+			var countdown = moment.duration();
             updateClock();
 
             setInterval(function(){
@@ -68,13 +70,15 @@
 			
 
             function updateClock(){
-                clock = moment("July 1 2016 00:00:00").subtract(moment());
-                clock.month("march"); // update manually, what a horrible hack sorry 
-				$("#months").html(clock.get('month'));
-                $("#days").html(clock.get('date'));
-                $("#hours").html(clock.get('hour'));
-                $("#minutes").html(clock.get('minute'));
-                $("#seconds").html(clock.get('second'));
+                //clock = moment(moment("July 1 2016 00:00:00")).subtract(moment());
+				clock = moment();
+				countdown = moment.duration(end.diff(clock));
+				console.log(countdown);
+				$("#months").html(countdown.get('month')); //$("#months").html(clock.get('month'));
+                $("#days").html(countdown.get('days')); // $("#days").html(clock.get('date'));
+                $("#hours").html(countdown.get('hour'));// $("#hours").html(clock.get('hour'));
+                $("#minutes").html(countdown.get('minute'));// $("#minutes").html(clock.get('minute'));
+                $("#seconds").html(countdown.get('second')); // $("#seconds").html(clock.get('second'));
             }
 
             function shuffle(o){
