@@ -19,5 +19,5 @@ Then open your web browser and navigate to http://localhost:4000
 
 ## Team
 
-[Connor Sites-Bowen](https://twitter.com/connorsb) with OpenPGH is localizing this for Pittsburgh.
+[Connor Sites-Bowen](https://twitter.com/connorsb) with CodeForPittsburgh is localizing this for Pittsburgh.
 Check out the about page for information about the team who built this ChiHackNight Project. 
