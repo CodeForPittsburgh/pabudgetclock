@@ -1,5 +1,21 @@
 # pa-budget-clock
-Counting down the days until PA has a budget. It would be like the number of days without a budget in huge letters, and then links below as to what it’s effects and context are (perhaps a curated list of news articles)
+Counting up the days and consequences Pennsylvania goes without a budget.
+
+See how long PA has gone without a budget: ⏰⏰ pabudgetclock.com ⏰⏰
+
+## Objectives/Goals:
+Raise public awareness about the lack of budget in PA by displaying the hard numbers - how long we’ve gone without one.
+
+## Introduction
+pabudgetclock.com lists the seconds, minutes, hours, days, and months that PA has gone without a budget. This impasse is historic - neither side seems willing to cave or give ground. Meanwhile, workarounds cost the taxpayers real dollars, needlessly sent to banks and third party agencies, while vital services rely on IOUs. The site serves to highlight these stories, and spread awareness of the lengthening problem.
+
+## About
+
+The site is built on github pages, using a github repo located [here](https://github.com/openpgh/pabudgetclock). 
+
+It’s pretty much good to go as is - It mostly needs to be updated as the story evolves. Potential changes include a second timer for THIS YEAR’S budget, an end to the site, etc. 
+
+Further issues or changes will be noted within the repository.
 
 ## Running locally
 
